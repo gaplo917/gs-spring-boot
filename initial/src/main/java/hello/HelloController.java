@@ -8,7 +8,13 @@ public class HelloController {
     
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "OK";
+    }
+    
+    @RequestMapping("/10ms")
+    public String index10ms() throws InterruptedException {
+        Thread.sleep(10);
+        return "OK";
     }
     
 }
